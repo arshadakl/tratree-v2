@@ -3,29 +3,29 @@ import React from 'react';
 export function WondersSection() {
   const cards = [
     {
-      tag: "MOUNTAINS",
-      title: "Camel Hill",
-      desc: "Majestic peaks rising above the clouds",
-      img: "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=700"
+      tag: 'MOUNTAINS',
+      title: 'Camel Hill',
+      desc: 'Majestic peaks rising above the clouds',
+      img: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=700',
     },
     {
-      tag: "FORESTS",
-      title: "Havana Street",
-      desc: "Ancient paths through timeless woodland",
-      img: "https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=700"
+      tag: 'FORESTS',
+      title: 'Havana Street',
+      desc: 'Ancient paths through timeless woodland',
+      img: 'https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=700',
     },
     {
-      tag: "WILDLIFE",
-      title: "Khung Savanna",
-      desc: "Breathtaking encounters with wild nature",
-      img: "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=700"
+      tag: 'WILDLIFE',
+      title: 'Khung Savanna',
+      desc: 'Breathtaking encounters with wild nature',
+      img: 'https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=700',
     },
     {
-      tag: "CANYONS",
-      title: "Red Mountain",
-      desc: "Dramatic red rock formations at sunset",
-      img: "https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&w=700"
-    }
+      tag: 'CANYONS',
+      title: 'Red Mountain',
+      desc: 'Dramatic red rock formations at sunset',
+      img: 'https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&w=700',
+    },
   ];
 
   return (
@@ -38,7 +38,9 @@ export function WondersSection() {
               Destinations
             </h5>
             <h2 className="text-[#E5F242] text-4xl md:text-6xl font-medium leading-[1.1] uppercase" style={{ fontFamily: 'var(--font-instrument-sans)' }}>
-              Explore the Wonders<br/>of the World
+              Explore the Wonders
+              <br />
+              of the World
             </h2>
           </div>
           <div className="flex items-center gap-6 max-w-sm">
@@ -56,11 +58,11 @@ export function WondersSection() {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cards.map((card, idx) => (
-            <div key={idx} className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-white/30 cursor-pointer">
-              <img 
-                src={card.img} 
-                alt={card.title} 
+          {cards.map((card, index) => (
+            <div key={index} className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-white/30 cursor-pointer">
+              <img
+                src={card.img}
+                alt={card.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 mix-blend-overlay md:mix-blend-normal"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>

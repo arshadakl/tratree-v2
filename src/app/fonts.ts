@@ -1,4 +1,4 @@
-import { Instrument_Serif, Manrope, Instrument_Sans, Inter, Source_Serif_4 } from 'next/font/google';
+import { Instrument_Sans, Instrument_Serif, Inter, Manrope, Source_Serif_4 } from 'next/font/google';
 
 export const sourceSerif4 = Source_Serif_4({
   weight: '600',

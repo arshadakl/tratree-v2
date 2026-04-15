@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
+import React, { useEffect, useRef } from 'react';
 
 interface VideoBackgroundProps {
   url: string;
@@ -12,7 +12,9 @@ export function VideoBackground({ url }: VideoBackgroundProps) {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      return;
+    }
 
     if (Hls.isSupported()) {
       const hls = new Hls({
@@ -25,13 +27,13 @@ export function VideoBackground({ url }: VideoBackgroundProps) {
       hls.loadSource(url);
       hls.attachMedia(video);
 
-      hls.on(Hls.Events.MANIFEST_PARSED, function () {
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
         // Switch to the highest quality level
         hls.currentLevel = hls.levels.length - 1;
         video.play().catch(console.error);
       });
-      
-      hls.on(Hls.Events.ERROR, function (event, data) {
+
+      hls.on(Hls.Events.ERROR, (event, data) => {
         if (data.fatal) {
           switch (data.type) {
             case Hls.ErrorTypes.NETWORK_ERROR:

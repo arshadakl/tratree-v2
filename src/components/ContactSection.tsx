@@ -1,7 +1,7 @@
 import { Instagram, MessageCircle, Phone } from 'lucide-react';
 
 export function ContactSection() {
-  const whatsappMessage = encodeURIComponent("Hi Tratree, I'm interested in booking a trip!");
+  const whatsappMessage = encodeURIComponent('Hi Tratree, I\'m interested in booking a trip!');
   const whatsappUrl = `https://wa.me/919526936172?text=${whatsappMessage}`;
 
   return (
@@ -10,19 +10,22 @@ export function ContactSection() {
         <h5 className="text-gray-500 text-xs md:text-sm font-semibold uppercase tracking-widest mb-6" style={{ fontFamily: 'var(--font-manrope)' }}>
           Get In Touch
         </h5>
-        
+
         <h2 className="text-[#E5F242] text-4xl md:text-[64px] font-medium leading-[1.1] uppercase mb-10" style={{ fontFamily: 'var(--font-instrument-sans)' }}>
-          Start your <span className="font-normal italic lowercase" style={{ fontFamily: 'var(--font-instrument-serif)' }}>journey</span><br/>
+          Start your
+          {' '}
+          <span className="font-normal italic lowercase" style={{ fontFamily: 'var(--font-instrument-serif)' }}>journey</span>
+          <br />
           with us
         </h2>
-        
+
         <div className="w-16 h-[1px] bg-white/10 mb-10"></div>
-        
+
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12">
           {/* Instagram */}
-          <a 
-            href="https://www.instagram.com/tratreeofficial" 
-            target="_blank" 
+          <a
+            href="https://www.instagram.com/tratreeofficial"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
             style={{ fontFamily: 'var(--font-manrope)' }}
@@ -34,9 +37,9 @@ export function ContactSection() {
           </a>
 
           {/* WhatsApp */}
-          <a 
-            href={whatsappUrl} 
-            target="_blank" 
+          <a
+            href={whatsappUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
             style={{ fontFamily: 'var(--font-manrope)' }}
@@ -48,7 +51,7 @@ export function ContactSection() {
           </a>
 
           {/* Phone */}
-          <a 
+          <a
             href="tel:+919526936172"
             className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
             style={{ fontFamily: 'var(--font-manrope)' }}
@@ -60,7 +63,6 @@ export function ContactSection() {
           </a>
         </div>
 
-        
       </div>
     </section>
   );

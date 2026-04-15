@@ -1,10 +1,10 @@
+import type { Metadata } from 'next';
 import { AlertDialogProvider } from '@/components/ui/extended/alert-dialog-provider';
 import { Toaster as SonnerToaster } from '@/components/ui/sonner';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { NextIntlProvider } from '@/providers/next-intl-provider';
 import { ReactQueryProvider } from '@/providers/react-query-provider';
-import { Metadata } from 'next';
 import { getLocale, getMessages, getNow, getTimeZone } from 'next-intl/server';
 import { instrumentSans, instrumentSerif, inter, manrope, sourceSerif4 } from './fonts';
 import './globals.css';
