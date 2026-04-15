@@ -8,13 +8,16 @@ import { WondersSection } from '@/components/WondersSection';
 import { ReactLenis } from 'lenis/react';
 
 export default function Home() {
+  const heroVideoUrl = 'https://stream.mux.com/02gzwandixH4J534bd00JsCvlFfw6ha101WQ00C9b3sGibM.m3u8';
+  const heroPosterUrl = 'https://image.mux.com/02gzwandixH4J534bd00JsCvlFfw6ha101WQ00C9b3sGibM/thumbnail.jpg?time=1';
+
   return (
     <ReactLenis root>
       <main className="bg-[#0b0f0b] w-full min-h-screen">
         {/* Hero Container */}
         <div className="relative h-screen w-full overflow-hidden transform-gpu bg-black">
           {/* Video Background */}
-          <VideoBackground url="https://stream.mux.com/02gzwandixH4J534bd00JsCvlFfw6ha101WQ00C9b3sGibM.m3u8" />
+          <VideoBackground posterUrl={heroPosterUrl} url={heroVideoUrl} />
 
           {/* Bottom Fade Mask to blend smoothly into WondersSection */}
           <div className="absolute bottom-0 left-0 w-full h-32 md:h-56 bg-gradient-to-t from-[#0b0f0b] to-transparent z-20 pointer-events-none transform-gpu"></div>
